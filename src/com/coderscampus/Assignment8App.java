@@ -14,7 +14,8 @@ public class Assignment8App {
 		ExecutorService pool = Executors.newFixedThreadPool(14);
 		List<CompletableFuture<List<Integer>>> tasks = new ArrayList<>();
 		for (int i = 0; i < 1000; i++) {
-			CompletableFuture<List<Integer>> task = CompletableFuture.supplyAsync(() -> assignment8.getNumbers(), pool);
+			CompletableFuture<List<Integer>> task =
+					CompletableFuture.supplyAsync(() -> assignment8.getNumbers(), pool);
 			tasks.add(task);
 		}
 

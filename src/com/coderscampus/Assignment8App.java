@@ -19,7 +19,8 @@ public class Assignment8App {
 			tasks.add(task);
 		}
 
-		CompletableFuture<Void> allTasksCompleted = CompletableFuture.allOf(tasks.toArray(new CompletableFuture[0]));
+		CompletableFuture<Void> allTasksCompleted =
+				CompletableFuture.allOf(tasks.toArray(new CompletableFuture[0]));
 
 		allTasksCompleted.join();
 
